@@ -16,11 +16,11 @@ import java.util.Set;
 public class SongsDatabase {
     private Map<String, Set<String>> map = new HashMap<>();
 
-    /* Adding song title */
+    /* methos for Adding song title */
     public void addSong(String genre, String songTitle) {
         map.computeIfAbsent(genre, k -> new HashSet<>()).add(songTitle);
     }
-
+// method to return song title and genre
     public String getGenreOfSong(String songTitle) {
         for (Map.Entry<String, Set<String>> entry : map.entrySet()) {
             if (entry.getValue().contains(songTitle)) {
@@ -30,7 +30,7 @@ public class SongsDatabase {
         return null; // Song title not found in genre
     }
 
-    
+    // method to return the bunch of songs in the given / requested genre 
     public Set<String> getSongs(String genre) {
         return map.getOrDefault(genre, new HashSet<>());
     }

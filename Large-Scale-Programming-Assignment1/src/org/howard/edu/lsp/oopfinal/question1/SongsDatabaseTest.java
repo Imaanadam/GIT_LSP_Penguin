@@ -21,19 +21,19 @@ import org.junit.Test;
 public class SongsDatabaseTest {
 
     private SongsDatabase db;
-
+// set up method 
     @Before
     public void setUp() {
         db = new SongsDatabase();
     }
-
+// test method for add song
     @Test
     public void testAddSong() {
         db.addSong("pop", "Houdini");
         Set<String> popSongs = db.getSongs("pop");
         assertTrue(popSongs.contains("Houdini"));
     }
-
+// testing method for getting the genre
     @Test
     public void testGetGenreOfSong() {
         db.addSong("kpop", "DNA");
@@ -43,7 +43,7 @@ public class SongsDatabaseTest {
         assertEquals("house", db.getGenreOfSong("hyperreal"));
         assertNull(db.getGenreOfSong("Carnival")); // Non-existing song
     }
-
+// testing method to get songs 
     @Test
     public void testGetSongs() {
         db.addSong("House", "Latch");
