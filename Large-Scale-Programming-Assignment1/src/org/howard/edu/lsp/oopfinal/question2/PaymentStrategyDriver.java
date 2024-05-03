@@ -17,4 +17,4 @@ public class PaymentStrategyDriver {
         cart.setPaymentStrategy(new BitcoinPayment("1AaBbCcDdEeFfGgHh"));
         cart.checkout(75.0);
     }
-} 
+}  

@@ -16,6 +16,6 @@ public class ShoppingCart {
 	    public void checkout(double amount) {
 	        paymentStrategy.pay(amount);
 	    }
-	}
+	} 
 
 
