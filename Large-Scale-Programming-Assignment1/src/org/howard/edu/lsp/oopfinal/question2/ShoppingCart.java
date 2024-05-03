@@ -12,7 +12,7 @@ public class ShoppingCart {
 	    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
 	        this.paymentStrategy = paymentStrategy;
 	    }
-// method to do checkout based on the payment 
+// method to do checkout based on the payment  
 	    public void checkout(double amount) {
 	        paymentStrategy.pay(amount);
 	    }

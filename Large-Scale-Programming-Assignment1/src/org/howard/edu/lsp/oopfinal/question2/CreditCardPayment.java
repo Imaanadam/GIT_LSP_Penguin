@@ -12,3 +12,4 @@ class CreditCardPayment implements PaymentStrategy {
         System.out.println("Paid " + amount + " using credit card " + CCNumber);
     }
 }
+ 
